@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  fast_api:
+    build: ./fast_api
+    container_name: fast_api
+    ports:
+        - 80:80
