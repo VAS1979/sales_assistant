@@ -1,8 +1,18 @@
 version: '3'
 
 services:
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+
   fast_api:
     build: ./fast_api
     container_name: fast_api
     ports:
-        - 80:80
+        - "80:80"
+    depends_on:
+      -  redis

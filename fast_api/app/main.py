@@ -2,9 +2,9 @@
 
 from fastapi import FastAPI
 
-print("FastAPI is running")
-
-app = FastAPI()
+app = FastAPI(
+    title="Sales_assistent"
+)
 
 
 @app.get("/")
