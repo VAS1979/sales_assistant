@@ -16,3 +16,10 @@ services:
         - "80:80"
     depends_on:
       -  redis
+    
+  moex_parser:
+    build: ./moex_parser
+    container_name: moex_parser
+    depends_on:
+      -  redis
+      -  fast_api
