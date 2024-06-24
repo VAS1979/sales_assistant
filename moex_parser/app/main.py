@@ -36,6 +36,8 @@ def main():
     redis_client.close()
 
 
+main()
+
 schedule.every(SURVEY_PERIOD).seconds.do(main)
 
 while True:
